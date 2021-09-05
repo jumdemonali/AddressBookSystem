@@ -11,6 +11,17 @@ public class AddressBookMain {
         System.out.println("Welcome to Address Book Program");
     }
 
+    public AddressBookMain(String firstName, String lastName, String address, String city, String state, String email, int zip, long phoneNo) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.email = email;
+        this.zip = zip;
+        this.phoneNo = phoneNo;
+    }
+
     public String getFirstName() {
         return firstName;
     }
