@@ -1,11 +1,13 @@
 package com.bl.addressbook;
-
+import java.util.Scanner;
 public class AddressBookMain {
     private String firstName, lastName, address, city, state, email;
     private int zip;
     private long phoneNo;
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         System.out.println("Welcome to Address Book Program");
     }
 
@@ -72,5 +74,19 @@ public class AddressBookMain {
     public void setPhoneNo(long phoneNo) {
         this.phoneNo = phoneNo;
     }
+    @Override
+    public String toString() {
+        return "AddressBookMain{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", email='" + email + '\'' +
+                ", zip=" + zip +
+                ", phoneNo=" + phoneNo +
+                '}';
+    }
+
 
 }
