@@ -161,6 +161,16 @@ public class AddressBook {
         }
         return flag == 1;
     }
+    public boolean DisplayAddressBook(String Name)
+    {
+        int flag = 0;
+        for (int i = 0; i < contactList.size(); i++) {
+            System.out.println(contactList);
+            flag = 1;
+        }
+        return flag == 1;
+    }
+
     public void getPersonNameByState(String State) {
         List<ContactDetails> list  = contactList.stream().filter(p ->p.getState().equals(State)).collect(Collectors.toList());
         for(ContactDetails contact: list){
