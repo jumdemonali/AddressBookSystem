@@ -91,6 +91,8 @@ public class AddressBookMain {
                     + "5]View contact By State Using State\n"
                     + "6]View Contact by city Using City\n"
                     + "7]Display AddressBook\n"
+                    +"8] Count State\n"
+                    +"9]Count city\n"
                     + "8]Exit\n"
                     + "Enter your Choice\n");
             int option = scan.nextInt();
@@ -151,12 +153,12 @@ public class AddressBookMain {
 
                     break;
                 case 8:
-                    System.out.println("Enter  State Name: ");
+                    System.out.println("Enter state Name: ");
                     String stateName = scan.next();
                     addressBookMain.NumberOfPeopleFromParticularState(stateName);
                     break;
                 case 9:
-                    System.out.println("Enter  City Name: ");
+                    System.out.println("Enter city Name: ");
                     String cityName = scan.next();
                     addressBookMain.NumberOfPeopleFromParticularcity(cityName);
                     break;
