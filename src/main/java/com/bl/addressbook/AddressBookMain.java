@@ -156,8 +156,15 @@ public class AddressBookMain {
                     e.printStackTrace();
                 }
                 addressbooks.addContacts();
+            case 12:
+                FileHandling fileHandlingjson = new FileHandling();
+                fileHandlingjson.writeContactToJson(addressBookSystem);
+                addressbooks.addContacts();
+                break;
+
             default:
                 System.out.println("Please Enter correct choice");
+                break;
         }
 
     }

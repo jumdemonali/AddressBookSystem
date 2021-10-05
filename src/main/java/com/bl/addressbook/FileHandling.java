@@ -1,14 +1,13 @@
 package com.bl.addressbook;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import com.opencsv.CSVWriter;
+
 public class FileHandling {
     public void writeContactToCsv(Map<String, AddressBook> addressBookSystem) throws IOException {
 
@@ -34,4 +33,16 @@ public class FileHandling {
         writer.flush();
         System.out.println("Details written into CSV");
     }
-}
+
+    public void writeContactToJson(Map<String, AddressBook> addressBookSystem) {
+        try {
+            Writer writer = new FileWriter("AddrBookFilejson.json");
+            new Gson().toJson(addressBookSystem, writer);
+            writer.close();
+            System.out.println("Details written into JSON File");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    }
+
