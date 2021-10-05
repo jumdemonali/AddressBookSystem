@@ -1,12 +1,12 @@
 package com.bl.addressbook;
 
-public class ContactDetails {
+public class Contact {
     private String firstName, lastName, address, city, state, email;
     long zip,phoneno;
-    public ContactDetails()
+    public Contact()
     {}
 
-    public ContactDetails(String firstName, String lastName, String address, String city, String state, String email,long zip,long phoneNo) {
+    public Contact(String firstName, String lastName, String address, String city, String state, String email, long zip, long phoneNo) {
        super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -98,6 +98,6 @@ public class ContactDetails {
     }
 
 
-    public void add(ContactDetails contactDetails) {
+    public void add(Contact contactDetails) {
     }
 }
